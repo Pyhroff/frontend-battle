@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Search } from './icons';
 
 export default function NavBar() {
   return (
@@ -27,6 +28,9 @@ export default function NavBar() {
       </ul>
 
       <div className="nav-actions">
+        <button type="button" className="nav-search" aria-label="Search">
+          <Search size={17} />
+        </button>
         <a href="#" className="btn btn-ghost nav-login" aria-label="Log in to DataFlow AI">Log in</a>
         <a href="#pricing" className="btn btn-primary" aria-label="Get started with DataFlow AI">
           Get Started

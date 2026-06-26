@@ -1,3 +1,5 @@
+import { ChevronLeft, ChevronRight, ArrowTrendingUp } from './icons';
+
 const TESTIMONIALS = [
   {
     quote:
@@ -42,22 +44,25 @@ export default function SocialProof() {
       style={{ background: 'var(--bg-elevated)' }}
     >
       <div className="container">
-        <header className="anim-fade-up visible" style={{ textAlign: 'center', maxWidth: '600px', marginInline: 'auto' }}>
-          <p className="section-label" aria-hidden="true">
-            {/* Star SVG — replace with provided asset */}
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M7 1l1.5 4h4l-3.3 2.4 1.3 4L7 9 3.5 11.4l1.3-4L1.5 5h4L7 1z" fill="#F5B14C" />
-            </svg>
-            Customer Stories
-          </p>
-          <h2 id="testimonials-heading" className="section-title">
-            Trusted by engineers at scale
-          </h2>
-          <p className="section-desc" style={{ marginInline: 'auto' }}>
-            From seed-stage startups to publicly-listed enterprises — DataFlow AI handles
-            the complexity so your team can focus on what matters.
-          </p>
-          <div className="divider" style={{ marginInline: 'auto' }} />
+        <header className="anim-fade-up visible testimonials-head">
+          <div>
+            <p className="section-label">
+              <ArrowTrendingUp size={14} />
+              Customer Stories
+            </p>
+            <h2 id="testimonials-heading" className="section-title">
+              Trusted by engineers at scale
+            </h2>
+            <p className="section-desc">
+              From seed-stage startups to publicly-listed enterprises — DataFlow AI handles
+              the complexity so your team can focus on what matters.
+            </p>
+            <div className="divider" />
+          </div>
+          <div className="testimonials-nav" role="group" aria-label="Testimonial navigation">
+            <button type="button" aria-label="Previous testimonial"><ChevronLeft size={18} /></button>
+            <button type="button" aria-label="Next testimonial"><ChevronRight size={18} /></button>
+          </div>
         </header>
 
         <div className="testimonials-grid" role="list">

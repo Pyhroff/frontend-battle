@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
-import { Space_Grotesk, Inter } from 'next/font/google';
+import { JetBrains_Mono, Inter } from 'next/font/google';
 import './globals.css';
 
-const spaceGrotesk = Space_Grotesk({
+/* Mandated typography (asset_package.zip → fonts.pdf):
+   JetBrains Mono for headers/code aesthetic, Inter for body/UI. */
+const jetbrainsMono = JetBrains_Mono({
   variable: '--font-display',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
 });
 
@@ -58,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable}`}
+      className={`${jetbrainsMono.variable} ${inter.variable}`}
     >
       <body>{children}</body>
     </html>

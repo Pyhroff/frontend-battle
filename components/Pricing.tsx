@@ -1,5 +1,6 @@
 import PricingControls from './PricingControls';
 import PriceDisplay from './PriceDisplay';
+import { ChartPie, XMark } from './icons';
 import { PRICING_MATRIX, TIER_FEATURES, type Tier } from '@/lib/pricingMatrix';
 
 const TIERS: Array<{ key: Tier; popular?: boolean }> = [
@@ -7,6 +8,13 @@ const TIERS: Array<{ key: Tier; popular?: boolean }> = [
   { key: 'pro',   popular: true },
   { key: 'scale' },
 ];
+
+/* Features explicitly NOT in a tier — rendered with the provided x-mark SVG */
+const EXCLUDED: Record<Tier, string[]> = {
+  starter: ['Priority support', 'Custom integrations'],
+  pro:     ['Dedicated infrastructure'],
+  scale:   [],
+};
 
 export default function Pricing() {
   return (
@@ -19,11 +27,8 @@ export default function Pricing() {
       <div className="container">
         {/* Header */}
         <header style={{ textAlign: 'center' }}>
-          <p className="section-label" style={{ justifyContent: 'center' }} aria-hidden="true">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <circle cx="7" cy="7" r="5" stroke="#F5B14C" strokeWidth="1.5" />
-              <path d="M7 4.5v2.5l1.5 1.5" stroke="#F5B14C" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
+          <p className="section-label" style={{ justifyContent: 'center' }}>
+            <ChartPie size={14} />
             Transparent Pricing
           </p>
           <h2 id="pricing-heading" className="section-title">
@@ -87,9 +92,15 @@ export default function Pricing() {
                         fill="none"
                         aria-hidden="true"
                       >
-                        <circle cx="8" cy="8" r="7" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.4)" strokeWidth="1" />
-                        <path d="M5 8l2 2 4-4" stroke="#10B981" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="8" cy="8" r="7" fill="rgba(90,169,188,0.12)" stroke="rgba(90,169,188,0.4)" strokeWidth="1" />
+                        <path d="M5 8l2 2 4-4" stroke="#5AA9BC" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                  {EXCLUDED[key].map((feature) => (
+                    <li key={feature} className="pricing-feature-item muted">
+                      <span className="x-icon"><XMark size={16} /></span>
                       <span>{feature}</span>
                     </li>
                   ))}

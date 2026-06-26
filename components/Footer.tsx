@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ChevronUpSolid, LinkSolid } from './icons';
 
 const FOOTER_LINKS = {
   Product: ['Features', 'Pricing', 'Changelog', 'Roadmap', 'Status'],
@@ -28,6 +29,13 @@ export default function Footer() {
               Next-gen AI automation platform. Build intelligent workflows,
               automate at scale, and ship faster than ever.
             </p>
+            <a
+              href="#"
+              aria-label="Read the documentation"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginTop: '1rem', color: 'var(--teal-bright)', fontSize: '0.85rem', fontFamily: 'var(--font-display)', textDecoration: 'none' }}
+            >
+              <LinkSolid size={15} /> Documentation &amp; API Reference
+            </a>
           </div>
 
           {/* Link cols */}
@@ -49,6 +57,9 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>© {year} DataFlow AI, Inc. All rights reserved.</p>
           <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+            <a href="#main-content" className="back-to-top" aria-label="Back to top">
+              <ChevronUpSolid size={14} /> Back to top
+            </a>
             {/* Social SVGs — replace with provided assets */}
             {[
               { label: 'Twitter / X', path: 'M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z' },
