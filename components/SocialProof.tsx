@@ -44,7 +44,7 @@ export default function SocialProof() {
       style={{ background: 'var(--bg-elevated)' }}
     >
       <div className="container">
-        <header className="anim-fade-up visible testimonials-head">
+        <header className="anim-fade-up testimonials-head">
           <div>
             <p className="section-label">
               <ArrowTrendingUp size={14} />
@@ -69,7 +69,7 @@ export default function SocialProof() {
           {TESTIMONIALS.map((t, i) => (
             <article
               key={i}
-              className={`testimonial-card anim-fade-up visible delay-${i + 1}`}
+              className={`testimonial-card anim-fade-up delay-${i + 1}`}
               role="listitem"
               aria-label={`Testimonial from ${t.name}`}
             >

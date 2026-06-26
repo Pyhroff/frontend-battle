@@ -58,7 +58,7 @@ export default function Pricing() {
             return (
               <article
                 key={key}
-                className={`pricing-card anim-fade-up visible${popular ? ' popular' : ''}`}
+                className={`pricing-card anim-fade-up${popular ? ' popular' : ''}`}
                 role="listitem"
                 aria-label={`${tier.name} plan`}
                 aria-describedby={`tier-desc-${key}`}

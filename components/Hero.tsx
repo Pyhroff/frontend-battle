@@ -1,3 +1,5 @@
+import CountUp from './CountUp';
+
 export default function Hero() {
   return (
     <section className="hero section-padding" aria-labelledby="hero-heading">
@@ -43,15 +45,21 @@ export default function Hero() {
 
             <div className="hero-stats anim-fade-up visible delay-4">
               <div className="stat-item">
-                <span className="stat-value">10K+</span>
+                <span className="stat-value">
+                  <CountUp to={10} suffix="K+" duration={1400} />
+                </span>
                 <span className="stat-label">tasks / second</span>
               </div>
               <div className="stat-item">
-                <span className="stat-value">99.99%</span>
+                <span className="stat-value">
+                  <CountUp to={99} suffix=".99%" duration={1600} />
+                </span>
                 <span className="stat-label">uptime SLA</span>
               </div>
               <div className="stat-item">
-                <span className="stat-value">500+</span>
+                <span className="stat-value">
+                  <CountUp to={500} suffix="+" duration={1800} />
+                </span>
                 <span className="stat-label">integrations</span>
               </div>
             </div>

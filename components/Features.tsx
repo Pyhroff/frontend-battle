@@ -9,6 +9,8 @@ const FEATURES: Array<{
   id: number;
   title: string;
   desc: string;
+  metric: string;
+  metricLabel: string;
   gridStyle: React.CSSProperties;
   Icon: FeatureIcon;
   accent: string;
@@ -16,50 +18,62 @@ const FEATURES: Array<{
   {
     id: 0,
     title: 'AI Automation Engine',
-    desc: 'Process 10,000+ tasks per second with zero configuration. Our neural orchestration layer learns your data structure and handles schema drift automatically.',
+    desc: 'Process tasks at scale with zero configuration. Our neural orchestration layer learns your data structure and handles schema drift automatically.',
+    metric: '10,000+',
+    metricLabel: 'tasks / sec',
     gridStyle: { gridColumn: 'span 2' },
     Icon: Cog8Tooth,
-    accent: '#FFC801', // Forsythia
+    accent: '#FFC801',
   },
   {
     id: 1,
     title: 'Real-time Analytics',
     desc: 'Live dashboards with sub-50ms latency. Watch your automation pipeline execute in real-time with granular observability at every node.',
+    metric: '<50ms',
+    metricLabel: 'latency',
     gridStyle: { gridColumn: 'span 1', gridRow: 'span 2' },
     Icon: ChartPie,
-    accent: '#5AA9BC', // teal accent
+    accent: '#5AA9BC',
   },
   {
     id: 2,
     title: 'Intelligent Workflows',
     desc: 'Build once, deploy everywhere. Our visual workflow builder compiles to optimized execution graphs with zero performance penalty.',
+    metric: '500+',
+    metricLabel: 'integrations',
     gridStyle: { gridColumn: 'span 1' },
     Icon: ArrowPath,
-    accent: '#FF9932', // Deep Saffron
+    accent: '#FF9932',
   },
   {
     id: 3,
     title: 'Secure by Default',
     desc: 'SOC2 Type II certified, GDPR compliant. End-to-end encryption, RBAC, and audit trails baked in — not bolted on.',
+    metric: 'SOC2',
+    metricLabel: 'Type II',
     gridStyle: { gridColumn: 'span 1' },
     Icon: Cube,
-    accent: '#FFC801', // Forsythia
+    accent: '#FFC801',
   },
   {
     id: 4,
     title: 'API-First Architecture',
     desc: 'Connect any tool with 500+ native integrations. RESTful and GraphQL APIs with sub-10ms response time and 99.99% availability.',
+    metric: '99.99%',
+    metricLabel: 'uptime SLA',
     gridStyle: { gridColumn: 'span 1' },
     Icon: Link,
-    accent: '#5AA9BC', // teal accent
+    accent: '#5AA9BC',
   },
   {
     id: 5,
     title: 'Global Edge Network',
     desc: '50+ edge nodes across 6 continents. Your workflows execute in the region closest to your data — minimizing latency, maximizing throughput.',
+    metric: '50+',
+    metricLabel: 'edge regions',
     gridStyle: { gridColumn: 'span 2' },
     Icon: ArrowTrendingUp,
-    accent: '#FF9932', // Deep Saffron
+    accent: '#FF9932',
   },
 ];
 
@@ -180,8 +194,8 @@ export default function Features() {
             return (
               <article
                 key={f.id}
-                className="bento-card anim-scale-in visible"
-                style={f.gridStyle}
+                className="bento-card anim-scale-in"
+                style={{ ...f.gridStyle, animationDelay: `${f.id * 0.07}s` }}
                 role="listitem"
                 tabIndex={0}
                 aria-label={f.title}
@@ -190,12 +204,18 @@ export default function Features() {
                 onFocus={() => { hoveredBentoRef.current = f.id; }}
                 onBlur={() => { hoveredBentoRef.current = null; }}
               >
-                <div
-                  className="bento-icon"
-                  style={{ background: `${f.accent}14`, border: `1px solid ${f.accent}3D`, color: f.accent }}
-                  aria-hidden="true"
-                >
-                  <Icon size={24} />
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+                  <div
+                    className="bento-icon"
+                    style={{ background: `${f.accent}14`, border: `1px solid ${f.accent}3D`, color: f.accent, margin: 0, flexShrink: 0 }}
+                    aria-hidden="true"
+                  >
+                    <Icon size={24} />
+                  </div>
+                  <div className="bento-metric" style={{ borderColor: `${f.accent}30` }}>
+                    <span className="bento-metric-value" style={{ color: f.accent }}>{f.metric}</span>
+                    <span className="bento-metric-label">{f.metricLabel}</span>
+                  </div>
                 </div>
                 <h3 className="bento-title">{f.title}</h3>
                 <p className="bento-desc">{f.desc}</p>
