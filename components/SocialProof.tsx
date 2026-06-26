@@ -5,7 +5,7 @@ const TESTIMONIALS = [
     name: 'Priya Nair',
     role: 'Head of Data, FinStack',
     initials: 'PN',
-    color: '#7C3AED',
+    color: '#2DD4BF',
   },
   {
     quote:
@@ -46,7 +46,7 @@ export default function SocialProof() {
           <p className="section-label" aria-hidden="true">
             {/* Star SVG — replace with provided asset */}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M7 1l1.5 4h4l-3.3 2.4 1.3 4L7 9 3.5 11.4l1.3-4L1.5 5h4L7 1z" fill="#9F67FF" />
+              <path d="M7 1l1.5 4h4l-3.3 2.4 1.3 4L7 9 3.5 11.4l1.3-4L1.5 5h4L7 1z" fill="#F5B14C" />
             </svg>
             Customer Stories
           </p>
@@ -70,7 +70,7 @@ export default function SocialProof() {
             >
               {/* Quote marks SVG */}
               <svg width="24" height="18" viewBox="0 0 24 18" fill="none" style={{ marginBottom: '1rem', opacity: 0.4 }} aria-hidden="true">
-                <path d="M0 18V10.5C0 4.5 4 1.5 6 0l1.5 1.5C5.5 3 4 5 4 7.5h4V18H0zm14 0V10.5C14 4.5 18 1.5 20 0l1.5 1.5C19.5 3 18 5 18 7.5h4V18h-8z" fill="var(--accent)" />
+                <path d="M0 18V10.5C0 4.5 4 1.5 6 0l1.5 1.5C5.5 3 4 5 4 7.5h4V18H0zm14 0V10.5C14 4.5 18 1.5 20 0l1.5 1.5C19.5 3 18 5 18 7.5h4V18h-8z" fill="var(--teal)" />
               </svg>
               <blockquote className="testimonial-quote">{t.quote}</blockquote>
               <footer className="testimonial-author">

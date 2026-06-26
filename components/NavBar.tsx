@@ -6,7 +6,7 @@ export default function NavBar() {
       <Link href="/" className="nav-logo" aria-label="DataFlow AI home">
         {/* Logo SVG — replace with provided asset */}
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="#7C3AED" />
+          <rect width="32" height="32" rx="8" fill="#2DD4BF" />
           <path
             d="M8 16h4l3-7 4 14 3-7 2 0"
             stroke="#fff"
@@ -16,7 +16,7 @@ export default function NavBar() {
             fill="none"
           />
         </svg>
-        <span>DataFlow<span style={{ color: 'var(--accent-light)' }}>AI</span></span>
+        <span>DataFlow<span style={{ color: 'var(--teal-bright)' }}>AI</span></span>
       </Link>
 
       <ul className="nav-links" role="list">

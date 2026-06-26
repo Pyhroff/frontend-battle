@@ -9,7 +9,7 @@ const FEATURES = [
     desc: 'Process 10,000+ tasks per second with zero configuration. Our neural orchestration layer learns your data structure and handles schema drift automatically.',
     gridStyle: { gridColumn: 'span 2' },
     iconPath: 'M6 12h3l2-6 3 12 2-6h3',
-    iconColor: '#7C3AED',
+    iconColor: '#2DD4BF',
   },
   {
     id: 1,
@@ -49,7 +49,7 @@ const FEATURES = [
     desc: '50+ edge nodes across 6 continents. Your workflows execute in the region closest to your data — minimizing latency, maximizing throughput.',
     gridStyle: { gridColumn: 'span 2' },
     iconPath: 'M12 2a10 10 0 100 20A10 10 0 0012 2zM2 12h20M12 2c-2.5 3-4 6.5-4 10s1.5 7 4 10M12 2c2.5 3 4 6.5 4 10s-1.5 7-4 10',
-    iconColor: '#8B5CF6',
+    iconColor: '#38BDF8',
   },
 ];
 
@@ -101,8 +101,8 @@ export default function Features() {
           <header>
             <p className="section-label" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <rect x="2" y="2" width="10" height="10" rx="2" stroke="#9F67FF" strokeWidth="1.5" />
-                <path d="M5 7h4M7 5v4" stroke="#9F67FF" strokeWidth="1.5" strokeLinecap="round" />
+                <rect x="2" y="2" width="10" height="10" rx="2" stroke="#F5B14C" strokeWidth="1.5" />
+                <path d="M5 7h4M7 5v4" stroke="#F5B14C" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
               Platform Capabilities
             </p>

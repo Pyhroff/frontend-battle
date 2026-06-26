@@ -12,8 +12,8 @@ export default function Hero() {
             <div className="hero-badge anim-fade-in visible">
               {/* Badge SVG — replace with provided asset */}
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <circle cx="7" cy="7" r="6" stroke="#9F67FF" strokeWidth="1.5" />
-                <path d="M4 7l2 2 4-4" stroke="#9F67FF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="7" cy="7" r="6" stroke="#5EEAD4" strokeWidth="1.5" />
+                <path d="M4 7l2 2 4-4" stroke="#5EEAD4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               Now in Public Beta — 500+ teams onboarded
             </div>
@@ -63,8 +63,8 @@ export default function Hero() {
               <div className="hero-card-header">
                 {/* Pipeline icon SVG — replace with provided asset */}
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-                  <rect width="36" height="36" rx="10" fill="rgba(124,58,237,0.15)" />
-                  <path d="M10 18h4l2-5 4 10 2-5h4" stroke="#9F67FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <rect width="36" height="36" rx="10" fill="rgba(45,212,191,0.15)" />
+                  <path d="M10 18h4l2-5 4 10 2-5h4" stroke="#5EEAD4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
                 <div>
                   <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '0.9rem', color: 'var(--text-primary)' }}>
@@ -80,7 +80,7 @@ export default function Hero() {
 
               <div className="hero-pipeline">
                 {[
-                  { label: 'Data Ingestion', icon: '📥', color: '#7C3AED' },
+                  { label: 'Data Ingestion', icon: '📥', color: '#2DD4BF' },
                   { label: 'AI Processing', icon: '🧠', color: '#06B6D4' },
                   { label: 'Enrichment Layer', icon: '⚡', color: '#10B981' },
                   { label: 'Delivery & Alert', icon: '🚀', color: '#F59E0B' },

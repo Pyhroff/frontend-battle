@@ -21,8 +21,8 @@ export default function Pricing() {
         <header style={{ textAlign: 'center' }}>
           <p className="section-label" style={{ justifyContent: 'center' }} aria-hidden="true">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <circle cx="7" cy="7" r="5" stroke="#9F67FF" strokeWidth="1.5" />
-              <path d="M7 4.5v2.5l1.5 1.5" stroke="#9F67FF" strokeWidth="1.5" strokeLinecap="round" />
+              <circle cx="7" cy="7" r="5" stroke="#F5B14C" strokeWidth="1.5" />
+              <path d="M7 4.5v2.5l1.5 1.5" stroke="#F5B14C" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
             Transparent Pricing
           </p>
@@ -132,7 +132,7 @@ export default function Pricing() {
             { icon: 'M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z', label: '24/7 support' },
           ].map(({ icon, label }) => (
             <div key={label} role="listitem" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal-bright)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d={icon} />
               </svg>
               {label}
